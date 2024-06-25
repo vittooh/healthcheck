@@ -1,0 +1,23 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+management:
+  endpoint:
+    health:
+      show-details: always
+      group:
+        mail:
+          include: mail
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
